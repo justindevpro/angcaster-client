@@ -23,7 +23,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "dev": "webpack-dev-server --inline"
+    "dev": "webpack-dev-server --inline",
+    "deploy": "gh-pages -d dist"
   },
   "author": "",
   "license": "ISC"

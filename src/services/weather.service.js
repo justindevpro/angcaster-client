@@ -1,5 +1,5 @@
-const base = 'http://localhost:8080/weather';
-const locationBase = 'http://localhost:8080/weather/location';
+const base = 'https://safe-peak-48064.herokuapp.com/weather';
+const locationBase = 'https://safe-peak-48064.herokuapp.com/weather/location';
 
 class WeatherService {
   constructor($http){
