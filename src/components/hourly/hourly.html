@@ -1,0 +1,11 @@
+<section ng-if='$ctrl.weatherData'>
+  <h1>Hourly Weather</h1>
+  <p>{{ $ctrl.weatherData.summary }}</p>
+  <ul>
+    <li ng-repeat='point in $ctrl.weatherData.data'>
+      Temperature: {{ point.temperature  }} &deg; F <-> {{ point.time * 1000 | date:"short" }}
+    </li>
+  </ul>
+</section>
+
+<!-- <pre>{{ $ctrl.weatherData | json }}</pre> -->

@@ -1,0 +1,6 @@
+<section ng-if='$ctrl.weatherData'>
+  <p>{{ $ctrl.weatherData.time * 1000 | date:"short"}}</p>
+  <p>Temperature: {{ $ctrl.weatherData.temperature }} &deg; F</p>
+  <p>Feels Like: {{ $ctrl.weatherData.apparentTemperature }} &deg; F</p>
+</section>
+<!-- <pre>{{ $ctrl.weatherData | json }}</pre> -->
