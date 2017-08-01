@@ -1,4 +1,8 @@
 const angular = require('angular');
+const nvd3 = require('angular-nvd3');
+
+const nvd3Style = require('nvd3/build/nv.d3.css');
+const tachyons = require('tachyons/css/tachyons.css');
 //components
 const AppComponent = require('./components/app/');
 const SearchComponent = require('./components/search');
@@ -9,7 +13,7 @@ const MinutelyWeatherComponent = require('./components/minutely');
 const WeatherService = require('./services/weather.service');
 const GeolocationService = require('./services/geolocation.service');
 
-angular.module('angcaster-client', [])
+angular.module('angcaster-client', [nvd3])
         .service('weather', WeatherService)
         .service('geolocation', GeolocationService)
         .component('app', AppComponent)

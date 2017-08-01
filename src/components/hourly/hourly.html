@@ -1,4 +1,4 @@
-<section ng-if='$ctrl.weatherData'>
+<!-- <section ng-if='$ctrl.weatherData'>
   <h1>Hourly Weather</h1>
   <p>{{ $ctrl.weatherData.summary }}</p>
   <ul>
@@ -6,6 +6,26 @@
       Temperature: {{ point.temperature  }} &deg; F <-> {{ point.time * 1000 | date:"short" }}
     </li>
   </ul>
+</section> -->
+<section ng-if='$ctrl.weatherData' class="ph3 ph5-ns pv5">
+  <article class="mw8 center br2 ba b--light-red bg-light-red overflow-x-scroll nowrap">
+    <div class="dt-ns dt--fixed-ns w-100">
+      <div class="pa3 pa4-ns dtc-ns v-mid">
+        <article ng-repeat='point in $ctrl.weatherData.data' class="br2 ba dark-gray b--black-10 mv4 w-100 w-50-m w-25-l mw5 center dib bg-white">
+          <img ng-src="images/icons/{{ point.icon }}.svg" class="db w-100 br2 br--top" alt="{{ point.icon }}">
+          <div class="pa2 ph3-ns pb3-ns">
+            <div class="dt w-100 mt1">
+              <div class="dtc">
+                <h1 class="f5 f4-ns mv0">{{ point.time * 1000 | date:"short" }}</h1>
+              </div>
+              <div class="dtc tr">
+                <h2 class="f5 mv0">{{ point.temperature }} &deg; F</h2>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </article>
 </section>
-
 <!-- <pre>{{ $ctrl.weatherData | json }}</pre> -->

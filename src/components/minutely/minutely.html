@@ -1,4 +1,4 @@
-<section ng-if='$ctrl.weatherData'>
+<!-- <section ng-if='$ctrl.weatherData'>
   <h1>Minutely</h1>
   <p>{{ $ctrl.weatherData.summary }}</p>
   <ul>
@@ -6,5 +6,10 @@
       Prob: {{ point.precipProbability }} - {{ point.time * 1000 | date:"short"}}
     </li>
   </ul>
+</section> -->
+<section ng-if='$ctrl.weatherData.data.length > 0' class="ph3 ph5-ns pv5">
+  <article class="mw8 center br2 ba b--light-red overflow-x-scroll nowrap">
+    <nvd3 options='$ctrl.options' data='$ctrl.data'></nvd3>
+  </article>
 </section>
 <!-- <pre>{{ $ctrl.weatherData | json }}</pre> -->

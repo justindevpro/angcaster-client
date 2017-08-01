@@ -1,6 +1,16 @@
-<section ng-if='$ctrl.weatherData'>
+<!-- <section ng-if='$ctrl.weatherData'>
   <p>{{ $ctrl.weatherData.time * 1000 | date:"short"}}</p>
   <p>Temperature: {{ $ctrl.weatherData.temperature }} &deg; F</p>
   <p>Feels Like: {{ $ctrl.weatherData.apparentTemperature }} &deg; F</p>
-</section>
+</section> -->
+<article ng-if='$ctrl.weatherData' class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+  <div class="tc">
+    <img ng-src="images/icons/{{$ctrl.weatherData.icon}}.svg"
+      class="br-100 h4 w4 dib ba b--black-05 pa2"
+      title="{{$ctrl.weatherData.icon}}">
+    <h1 class="f3 mb2">Temperature: {{ $ctrl.weatherData.temperature }} &deg; F</h1>
+    <h2 class="f5 fw4 gray mt0">Feels Like: {{ $ctrl.weatherData.apparentTemperature }} &deg; F</h2>
+  </div>
+</article>
+
 <!-- <pre>{{ $ctrl.weatherData | json }}</pre> -->
